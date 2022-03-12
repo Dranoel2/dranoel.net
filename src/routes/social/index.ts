@@ -22,15 +22,11 @@ async function getVideos(): Promise<video[]> {
 		const json: any = await response.json();
 		const items: any[] = json.items;
 		const videos: video[] = items.map((item) => {
-			const title = item.snippet.title;
-			const thumbnail = item.snippet.thumbnails.high.url;
-			const id = item.contentDetails.videoId;
-			const description = item.snippet.description.split('\n')[0];
 			const video: video = {
-				title,
-				thumbnail,
-				id,
-				description
+				title: item.snippet.title,
+				thumbnail: item.snippet.thumbnails.medium.url,
+				id: item.contentDetails.videoId,
+				description: item.snippet.description.split('\n')[0]
 			};
 			return video;
 		});

@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer components {
-  a {
-    @apply text-link-inactive hover:text-link-active;
-  }
+	a {
+		@apply text-link-inactive hover:text-link-active;
+	}
 }
 
 html::-webkit-scrollbar {
@@ -16,4 +16,3 @@ html {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
-

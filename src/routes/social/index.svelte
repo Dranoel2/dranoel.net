@@ -1,10 +1,10 @@
 <script lang="ts">
-	interface video {
-		title: string;
-		thumbnail: string;
-		id: string;
-		description: string;
-	}
+  interface video {
+    title: string;
+    thumbnail: string;
+    id: string;
+    description: string;
+  }
 	export let videos: video[];
 </script>
 
