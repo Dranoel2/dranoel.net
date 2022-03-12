@@ -1,10 +1,10 @@
 <script lang="ts">
-  interface video {
-    title: string;
-    thumbnail: string;
-    id: string;
-    description: string;
-  }
+	interface video {
+		title: string;
+		thumbnail: string;
+		id: string;
+		description: string;
+	}
 	export let videos: video[];
 </script>
 
@@ -15,7 +15,7 @@
 		{#each videos as video}
 			<li class="border-solid border-2 border-black p-1 h-full auto-rows-max">
 				<a href="https://youtu.be/{video.id}" class="text-black hover:text-black">
-					<img src={video.thumbnail} alt="The video thumbnail" />
+					<img src={video.thumbnail} class="w-full border-solid border-black border-2" alt="The video thumbnail" />
 					<h1 class="text-xl text-center border-b-black border-solid border-b-2">{video.title}</h1>
 					<p>{video.description}</p>
 				</a>

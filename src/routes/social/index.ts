@@ -20,15 +20,13 @@ async function getVideos(): Promise<video[]> {
 	);
 	if (response.ok) {
 		const json: any = await response.json();
-		const items: any[] = json.items;
-		const videos: video[] = items.map((item) => {
-			const video: video = {
+		const videos: video[] = json.items.map((item) => {
+			return {
 				title: item.snippet.title,
 				thumbnail: item.snippet.thumbnails.medium.url,
 				id: item.contentDetails.videoId,
 				description: item.snippet.description.split('\n')[0]
 			};
-			return video;
 		});
 		return videos;
 	} else {
@@ -38,11 +36,9 @@ async function getVideos(): Promise<video[]> {
 
 /** @type {import("./index").RequestHandler} */
 export const get = async () => {
-	const videos: video[] = await getVideos();
-
 	return {
 		body: {
-			videos: videos
+			videos: await getVideos()
 		}
 	};
 };
