@@ -18,22 +18,26 @@ async function getVideos(): Promise<video[]> {
 			}
 		}
 	);
-	const json: any = await response.json();
-	const items: any[] = json.items;
-	const videos: video[] = items.map((item) => {
-		const title = item.snippet.title;
-		const thumbnail = item.snippet.thumbnails.high.url;
-		const id = item.contentDetails.videoId;
-		const description = item.snippet.description.split('\n')[0];
-		const video: video = {
-			title,
-			thumbnail,
-			id,
-			description
-		};
-		return video;
-	});
-	return videos;
+	if (response.ok) {
+		const json: any = await response.json();
+		const items: any[] = json.items;
+		const videos: video[] = items.map((item) => {
+			const title = item.snippet.title;
+			const thumbnail = item.snippet.thumbnails.high.url;
+			const id = item.contentDetails.videoId;
+			const description = item.snippet.description.split('\n')[0];
+			const video: video = {
+				title,
+				thumbnail,
+				id,
+				description
+			};
+			return video;
+		});
+		return videos;
+	} else {
+		return [];
+	}
 }
 
 /** @type {import("./index").RequestHandler} */
