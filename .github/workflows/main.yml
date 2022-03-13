@@ -30,14 +30,3 @@ jobs:
         run: pnpm test
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-
-      - name: build
-        run: |
-          pnpm build
-          cp ./package.json build/package.json
-
-      - name: capture artifacts
-        uses: actions/upload-artifact@v3.0.0
-        with:
-          name: build
-          path: build/
