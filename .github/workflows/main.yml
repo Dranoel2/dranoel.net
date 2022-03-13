@@ -22,6 +22,8 @@ jobs:
 
       - name: install playwright browsers
         run: pnpm exec playwright install
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
 
       - name: check code
         run: pnpm check
