@@ -11,24 +11,24 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v3.0.0
-        
+
       - name: setup pnpm
         uses: pnpm/action-setup@v2.1.0
-          with:
-            version: latest
-      
+        with:
+          version: latest
+
       - name: install dependencies
         run: pnpm install
-      
+
       - name: check code
         run: pnpm check
-      
+
       - name: run tests
         run: pnpm test
-      
+
       - name: build
         run: pnpm build
-        
+
       - name: capture artifacts
         uses: actions/upload-artifact@v3.0.0
         with:
