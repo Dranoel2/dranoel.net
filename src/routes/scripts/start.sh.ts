@@ -1,5 +1,5 @@
 /** @type {import('@sveltejs/kit').RequestHandler<{
- * version: string?;
+ * memory: string?;
  * }>} */
 export async function get({ url }) {
 	let memory: string = url.searchParams.get('memory');
