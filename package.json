@@ -1,7 +1,8 @@
 {
 	"name": "dranoels-website",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"author": "Dranoel (https://dranoel.net)",
+  "license": "MIT",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
