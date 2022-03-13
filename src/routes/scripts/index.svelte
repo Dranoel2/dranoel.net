@@ -1,5 +1,5 @@
 <head>
-  <title>Dranoel - Scripts</title>
+	<title>Dranoel - Scripts</title>
 </head>
 <p>Some useful shell scripts:</p>
 <ul class="list-disc list-inside">

@@ -1,10 +1,10 @@
 <a
 	class="text-zinc-400 hover:text-zinc-500 fixed bottom-3 left-3"
-	href="https://github.com/Dranoel2/dranoels-website/LICENSE">&copy; 2022 Dranoel</a
+	href="https://github.com/Dranoel2/dranoel.net/LICENSE">&copy; 2022 Dranoel</a
 >
 <a
 	class="fixed bottom-3 right-3 text-zinc-400 hover:text-zinc-500"
-	href="https://github.com/Dranoel2/dranoels-website"
+	href="https://github.com/Dranoel2/dranoel.net"
 >
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
