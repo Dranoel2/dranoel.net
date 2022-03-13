@@ -1,6 +1,3 @@
-<head>
-  <title>Dranoel - Social</title>
-</head>
 <script lang="ts">
 	interface video {
 		title: string;
@@ -10,6 +7,10 @@
 	}
 	export let videos: video[];
 </script>
+
+<head>
+	<title>Dranoel - Social</title>
+</head>
 
 <h1 class="text-xl">Youtube:</h1>
 <a href="https://www.youtube.com/channel/UCBm396dLk0qyLmkcUFkso3w">Check out my channel!</a>
