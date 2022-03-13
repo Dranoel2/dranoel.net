@@ -20,6 +20,9 @@ jobs:
       - name: install dependencies
         run: pnpm install
 
+      - name: install playwright browsers
+        run: pnpm exec playwright install
+
       - name: check code
         run: pnpm check
 
