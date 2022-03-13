@@ -13,4 +13,5 @@
 >
 	<NavLink href="/">Home</NavLink>
 	<NavLink href="/social">Social</NavLink>
+	<NavLink href="/scripts">Scripts</NavLink>
 </div>
