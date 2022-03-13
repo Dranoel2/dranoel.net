@@ -32,7 +32,6 @@ export async function get({ url }) {
 		const versionStrings = minecraftJson.map((version) => {
 			return version.version;
 		});
-		console.log(versionStrings);
 		if (versionStrings.includes(paramVersion)) {
 			minecraftLatest = paramVersion;
 		} else {
@@ -45,15 +44,15 @@ export async function get({ url }) {
 		minecraftLatest = minecraftStable[0].version;
 	}
 
-  const memory = url.searchParams.get("memory")
-  if(memory !== undefined && isNaN(+memory)) {
-    return {
-      status: 422,
-      body: "Not a number!"
-    }
-  }
+	const memory = url.searchParams.get('memory');
+	if (memory !== undefined && isNaN(+memory)) {
+		return {
+			status: 422,
+			body: 'Not a number!'
+		};
+	}
 
-	const startScript = `${url.origin}/scripts/start.sh?memory=${memory || "2"}G`;
+	const startScript = `${url.origin}/scripts/start.sh?memory=${memory || '2'}G`;
 
 	const script = `#!/usr/bin/env bash
 cd $(dirname $0)
