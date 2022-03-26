@@ -12,9 +12,11 @@
 	<title>Dranoel - Social</title>
 </head>
 
-<h1 class="text-xl"><a href="https://www.youtube.com/channel/UCBm396dLk0qyLmkcUFkso3w">Youtube</a></h1>
+<h1 class="text-xl">
+	<a href="https://www.youtube.com/channel/UCBm396dLk0qyLmkcUFkso3w">Youtube</a>
+</h1>
 {#if videos.length >= 1}
-	<ul class="grid grid-cols-4 gap-1">
+	<ul class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-1">
 		{#each videos as video}
 			<li class="border-solid border-2 border-black p-1 h-full auto-rows-max">
 				<a href="https://youtu.be/{video.id}" class="text-black hover:text-black">
