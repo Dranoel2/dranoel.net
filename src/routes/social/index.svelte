@@ -12,8 +12,7 @@
 	<title>Dranoel - Social</title>
 </head>
 
-<h1 class="text-xl">Youtube:</h1>
-<a href="https://www.youtube.com/channel/UCBm396dLk0qyLmkcUFkso3w">Check out my channel!</a>
+<h1 class="text-xl"><a href="https://www.youtube.com/channel/UCBm396dLk0qyLmkcUFkso3w">Youtube</a></h1>
 {#if videos.length >= 1}
 	<ul class="grid grid-cols-4 gap-1">
 		{#each videos as video}
@@ -36,3 +35,5 @@
 		<p class="text-sm">This may be a bug.</p>
 	</div>
 {/if}
+
+<h1 class="text-xl"><a href="https://matrix.to/#/#chat:dranoel.net">Matrix</a></h1>
