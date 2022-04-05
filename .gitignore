@@ -6,5 +6,4 @@ node_modules
 .env
 .env.*
 !.env.example
-pnpm_debug.log
-.netlify
+npm_debug.log

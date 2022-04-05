@@ -3,7 +3,7 @@ load_env();
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
 	webServer: {
-		command: `pnpm build && GOOGLE_API_KEY=${process.env.GOOGLE_API_KEY} pnpm preview`,
+		command: `npm run build && GOOGLE_API_KEY=${process.env.GOOGLE_API_KEY} npm run preview`,
 		port: 3000
 	}
 };

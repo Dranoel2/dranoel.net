@@ -4,7 +4,7 @@
 	import '../app.css';
 </script>
 
-<div class="p-3 h-full">
+<div class="p-3 h-full pb-8">
 	<div class="w-full">
 		<Navbar />
 
