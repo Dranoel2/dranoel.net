@@ -8,5 +8,5 @@ RUN npm run build
 FROM node:lts-alpine
 COPY --from=build /app/build /app
 WORKDIR /app
-COPY --from=build /app/package-prod.json ./
+COPY --from=build /app/package-prod.json ./package.json
 CMD ["node", "."]
