@@ -6,7 +6,15 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter({ out: 'build' })
+		adapter: adapter({ out: 'build' }),
+		prerender: {
+			default: true,
+			enabled: true
+		},
+		browser: {
+			hydrate: false,
+			router: false
+		}
 	}
 };
 

@@ -7,7 +7,7 @@
 
 <a
 	class="w-full text-center {href == base_path
-		? 'text-nav-active'
-		: 'text-nav-inactive'} hover:text-nav-active align-middle leading-[3.5rem] duration-500"
+		? 'text-nav-active hover:text-nav-active'
+		: 'text-nav-inactive hover:text-nav-inactive'} align-middle leading-[3.5rem] "
 	{href}><slot /></a
 >
